@@ -29800,8 +29800,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var emojis = {
   "😊": "Happy",
   "😁": "Beaming Face with Smiling Eyes",
+  "😆": "Laughing",
+  "😎": "Cool",
   "😇": "Smiling face with Halo",
-  "😍": "Heart eyes"
+  "😍": "Heart eyes",
+  "😈": "Devil"
 };
 
 var App = function App() {
@@ -29833,7 +29836,7 @@ var App = function App() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Meaning: ", meaning)), /*#__PURE__*/_react.default.createElement("div", {
     className: "emojis"
   }, emojisList.map(function (item) {
-    return /*#__PURE__*/_react.default.createElement("span", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       key: item,
       className: "item",
       onClick: function onClick() {

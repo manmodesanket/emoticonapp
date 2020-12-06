@@ -4,15 +4,18 @@ import ReactDOM from "react-dom";
 let emojis = {
     "😊": "Happy",
     "😁": "Beaming Face with Smiling Eyes",
+    "😆": "Laughing",
+    "😎": "Cool",
     "😇": "Smiling face with Halo",
-    "😍": "Heart eyes"
+    "😍": "Heart eyes",
+    "😈": "Devil"
 }
 
 
 const App = () => {
     let [meaning, setMeaning] = useState("");
     let emojisList = Object.keys(emojis);
-    
+
     let emojiInputHandler = () => {
         let meaning = emojis[event.target.value];
         setMeaning(meaning);
@@ -34,7 +37,7 @@ const App = () => {
             <div className="emojis">
                 {
                     emojisList.map((item) => {
-                    return <span key={item} className="item" onClick={() => emojiHandler(item)}>{item}</span>
+                    return <div key={item} className="item" onClick={() => emojiHandler(item)}>{item}</div>
                     })
                 }
             </div>

@@ -2,7 +2,7 @@
 * {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: brown;
+    background-color: rgb(121, 85, 85);
 }
 
 .emo-input {
@@ -22,13 +22,15 @@
 }
 
 .emojis {
-    margin: 5rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .item {
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
