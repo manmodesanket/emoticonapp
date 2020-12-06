@@ -29802,6 +29802,8 @@ var emojis = {
   "😁": "Beaming Face with Smiling Eyes",
   "😆": "Laughing",
   "😎": "Cool",
+  "😜": "Crazy",
+  "😋": "Goofy",
   "😇": "Smiling face with Halo",
   "😍": "Heart eyes",
   "😈": "Devil"
@@ -29875,7 +29877,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59832" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60332" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -6,6 +6,8 @@ let emojis = {
     "😁": "Beaming Face with Smiling Eyes",
     "😆": "Laughing",
     "😎": "Cool",
+    "😜": "Crazy",
+    "😋": "Goofy",
     "😇": "Smiling face with Halo",
     "😍": "Heart eyes",
     "😈": "Devil"
