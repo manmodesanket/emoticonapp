@@ -29799,6 +29799,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var emojis = {
   "😊": "Happy",
+  "😁": "Beaming Face with Smiling Eyes",
   "😇": "Smiling face with Halo",
   "😍": "Heart eyes"
 };
@@ -29809,16 +29810,37 @@ var App = function App() {
       meaning = _useState2[0],
       setMeaning = _useState2[1];
 
-  var emojiHandler = function emojiHandler() {
+  var emojisList = Object.keys(emojis);
+
+  var emojiInputHandler = function emojiInputHandler() {
     var meaning = emojis[event.target.value];
     setMeaning(meaning);
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+  var emojiHandler = function emojiHandler(item) {
+    var meaning = emojis[item];
+    setMeaning(meaning);
+  };
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "emo-input"
+  }, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
-    id: "emo-input",
-    onChange: emojiHandler
-  }), /*#__PURE__*/_react.default.createElement("div", null, "Meaning ", meaning));
+    className: "input",
+    onChange: emojiInputHandler
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "meaning"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "Meaning: ", meaning)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "emojis"
+  }, emojisList.map(function (item) {
+    return /*#__PURE__*/_react.default.createElement("span", {
+      key: item,
+      className: "item",
+      onClick: function onClick() {
+        return emojiHandler(item);
+      }
+    }, item);
+  })));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById("root"));
